@@ -14,7 +14,9 @@ body {
 nav {
   background-color: #0066cc;
   padding: 1rem;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav a {
@@ -38,6 +40,10 @@ header {
   border-radius: 10px;
 }
 
+header p {
+  color: grey;
+}
+
 section {
   padding: 2rem;
   margin: 1rem auto;
@@ -45,6 +51,18 @@ section {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-entry {
+  padding: 1rem;
+}
+
+.education-entry li {
+  padding: 10px;
+}
+
+.degree-name {
+  font-weight: 600;
 }
 
 form {
@@ -77,12 +95,12 @@ form button:hover {
     transform: scale(1.05);
 }
 
-ul {
+.social-links {
     list-style-type: none;
     padding: 0;
 }
 
-ul li {
+.social-links li {
     margin-bottom: 0.5rem;
 }
 
@@ -93,4 +111,42 @@ ul li a {
 
 ul li a:hover {
     text-decoration: underline;
+}
+
+#about-me {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 2rem;
+}
+
+.project-card {
+  background-color: #0066cc;
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.project-card:hover {
+  background-color: #004d99;
+  transform: scale(1.05);
 }
