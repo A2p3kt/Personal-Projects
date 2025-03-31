@@ -6,51 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tolu Ayoola - Contact</title>
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="styles/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="styles/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="styles/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="styles/images/favicon/site.webmanifest">
   </head>
   <body>
     <!--Navigation Bar with links to other pages-->
     <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+        <div class="logo"><a href="index.html">My Portfolio</a></div>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="contact.html" class="active">Contact</a>
+        </div>
+      </nav>
 
     <!--Main content of the page-->
-    <header>
-        <h1>Contact Me</h1>
-        <p>Feel free to reach out to me through the form below, or connect with me on social media</p>
-    </header>
+    <main>
+        <header>
+            <h1>Contact Me</h1>
+            <p>Feel free to reach out to me through the form below, or connect with me on social media</p>
+        </header>
+    
+        <section>
+            <h2>Social Links</h2>
+            <ul class="social-links">
+                <li><a href="https://github.com/A2p3kt" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/toluwalase-ayoola-289bb1345/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://discordapp.com/users/zeus09918" target="_blank">Discord</a></li>
+                <li><a href="https://www.youtube.com/@t-ayoola" target="_blank">YouTube</a></li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Contact Form</h2>
+            <form action="#" method="post">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Full Name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="username@example.com" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" rows="5" placeholder="Type in your message" required></textarea>
+                </div>
+                <div>
+                    <button type="submit">Send Message</button>
+                </div>
+            </form>
+        </section>
+    </main>
 
-    <section>
-        <h2>Social Links</h2>
-        <ul class="social-links">
-            <li><a href="https://github.com/A2p3kt" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/toluwalase-ayoola-289bb1345/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://discordapp.com/users/zeus09918" target="_blank">Discord</a></li>
-            <li><a href="https://www.youtube.com/@t-ayoola" target="_blank">YouTube</a></li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Contact Form</h2>
-        <form action="#" method="post">
-            <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Full Name" required>
+    <!--Footer of the page-->
+    <footer>
+        <section class="sign-up">
+          <form action="#" id="newsletter-form">
+            <label for="email">
+              <h3>Let's stay in touch</h3>
+              <p>Subscribe to my newsletter for updates</p>
+            </label>
+            <div class="input-group">
+              <input type="email" name="email" id="signup-email" placeholder="Enter your email address" required />
+              <button type="submit">→</button>
             </div>
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" placeholder="username@example.com" required>
-            </div>
-            <div>
-                <label for="message">Message:</label>
-                <textarea name="message" id="message" rows="5" placeholder="Type in your message" required></textarea>
-            </div>
-            <div>
-                <button type="submit">Send Message</button>
-            </div>
-        </form>
-    </section>
+          </form>
+        </section>
+  
+        <section class="socials">
+          <a href="https://github.com/A2p3kt" target="_blank" rel="noopener noreferrer"><img src="styles/images/svg-icons/github-svgrepo-com.svg" alt="GitHub"></a>
+          <a href="https://www.linkedin.com/in/toluwalase-ayoola-289bb1345/" target="_blank" rel="noopener noreferrer"><img src="styles/images/svg-icons/linkedin-svgrepo-com.svg" alt="LinkedIn"></a>
+          <a href="https://discordapp.com/users/zeus09918" target="_blank" rel="noopener noreferrer"><img src="styles/images/svg-icons/discord-svgrepo-com.svg" alt="Discord"></a>
+          <a href="https://www.youtube.com/@t-ayoola" target="_blank" rel="noopener noreferrer"><img src="styles/images/svg-icons/youtube-svgrepo-com.svg" alt="YouTube"></a>
+        </section>
+  
+        <section class="copyright">&copy; 2025 Ayoola Toluwalase Elijah. All rights reserved</section>
+  
+      </footer>
   </body>
 </html>

@@ -6,34 +6,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tolu Ayoola - Projects</title>
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="styles/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="styles/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="styles/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="styles/images/favicon/site.webmanifest">
   </head>
   <body>
     <!--Navigation Bar with links to other pages-->
     <nav>
-      <a href="index.html">Home</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+      <div class="logo"><a href="index.html">My Portfolio</a></div>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </nav>
 
     <!--Main content of the page-->
-    <header>
-      <h1>Projects</h1>
-      <p>
-        A section to display what I have been working on. (Nothing to show yet,
-        but stay tuned!)
-      </p>
-    </header>
+    <main>
+      <header>
+        <h1>Projects</h1>
+        <p>
+          A section to display what I have been working on. (Nothing to show yet,
+          but stay tuned!)
+        </p>
+      </header>
+  
+      <section id="projects-section">
+        <h2>My Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">Coming Soon, Stay tuned!</div>
+          <div class="project-card">Coming Soon, Stay tuned!</div>
+          <div class="project-card">Coming Soon, Stay tuned!</div>
+          <div class="project-card">Coming Soon, Stay tuned!</div>
+          <div class="project-card">Coming Soon, Stay tuned!</div>
+        </div>
+      </section>
+    </main>
 
-    <section id="projects-section">
-      <h2>My Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">Coming Soon, Stay tuned!</div>
-        <div class="project-card">Coming Soon, Stay tuned!</div>
-        <div class="project-card">Coming Soon, Stay tuned!</div>
-        <div class="project-card">Coming Soon, Stay tuned!</div>
-        <div class="project-card">Coming Soon, Stay tuned!</div>
-      </div>
-    </section>
+    <!--Footer of the page-->
+    <footer>
+      <section class="sign-up">
+        <form action="#" id="newsletter-form">
+          <label for="email">
+            <h3>Let's stay in touch</h3>
+            <p>Subscribe to my newsletter for updates</p>
+          </label>
+          <div class="input-group">
+            <input type="email" name="email" id="signup-email" placeholder="Enter your email address" required />
+            <button type="submit">→</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="socials">
+        <a href="https://github.com/A2p3kt" target="_blank" rel="noopener noreferrer"><img src="styles/images/svg-icons/github-svgrepo-com.svg" alt="GitHub"></a>
+        <a href="https://www.linkedin.com/in/toluwalase-ayoola-289bb1345/" target="_blank" rel="noopener noreferrer"><img src="styles/images/svg-icons/linkedin-svgrepo-com.svg" alt="LinkedIn"></a>
+        <a href="https://discordapp.com/users/zeus09918" target="_blank" rel="noopener noreferrer"><img src="styles/images/svg-icons/discord-svgrepo-com.svg" alt="Discord"></a>
+        <a href="https://www.youtube.com/@t-ayoola" target="_blank" rel="noopener noreferrer"><img src="styles/images/svg-icons/youtube-svgrepo-com.svg" alt="YouTube"></a>
+      </section>
+
+      <section class="copyright">&copy; 2025 Ayoola Toluwalase Elijah. All rights reserved</section>
+
+    </footer>
   </body>
 </html>
