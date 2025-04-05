@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      (function () {
+        // Gets the users preference from former visits
+        const theme = localStorage.getItem("theme");
+        // Gets the users browser preference
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        // Checks if the user already has a theme preference or defaults to the broswer preference
+        if (theme === 'dark' || (!theme && prefersDark)){
+          document.documentElement.classList.add("dark-mode");
+        }
+      })();
+    </script>
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Tolu Ayoola - Portfolio</title>
+
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +39,9 @@
         <a href="index.html" class="active">Home</a>
         <a href="projects.html">Projects</a>
         <a href="contact.html">Contact</a>
-        <button id="theme-toggle">Toggle Dark Mode</button>
+        <button id="theme-toggle">
+          <img id="theme-icon" src="styles/images/svg-icons/dark-mode.svg" alt="Theme Toggle">
+        </button>
       </div>
     </nav>
 

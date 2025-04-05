@@ -1,41 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
     const toggleButton = document.getElementById("theme-toggle");
+    const icon = document.getElementById("theme-icon");
 
-    //Get the user theme preference
-    let darkMode = localStorage.getItem("darkMode") === "true";
-
-    //Apply theme from the load of the page
-    applyTheme(darkMode);
+    function updateIcon (theme) {
+        icon.src = theme === 'dark' ? 'styles/images/svg-icons/light-mode.svg' : 'styles/images/svg-icons/dark-mode.svg';
+        icon.alt = theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark mode'
+    }
+    
+    // Get the current theme
+    const currentTheme = document.documentElement.classList.contains('dark-mode') ? 'dark' : 'light'
+    updateIcon(currentTheme)
 
     //When the user wants to change the theme preference
     toggleButton.addEventListener("click", () => {
-        //Change the theme to be used
-        darkMode = !darkMode;
+        const isDark = document.documentElement.classList.contains('dark-mode');
 
-        //Save the new preference
-        localStorage.setItem("darkMode", darkMode)
+        document.documentElement.classList.toggle('dark-mode');
 
-        //Apply the new theme
-        applyTheme(darkMode);
+        const newTheme = isDark ? 'light' : 'dark'
+
+        localStorage.setItem('theme', newTheme);
+
+        updateIcon(newTheme)
     })
 })
-
-function applyTheme (darkMode) {
-    if (darkMode) {
-        document.documentElement.style.setProperty("--bg-color", "#121212");
-        document.documentElement.style.setProperty("--text-color", "#f0f0f0");
-        document.documentElement.style.setProperty("--primary-color", "#0052a3");
-        document.documentElement.style.setProperty("--hover-color", "#ff99e6");
-        document.documentElement.style.setProperty("--footer-bg", "#001a33");
-        document.documentElement.style.setProperty("--section-bg", "#1e1e1e");
-        document.getElementById("theme-toggle").textContent = "Toggle Light Mode"
-    } else {
-        document.documentElement.style.setProperty("--bg-color", "#f0f0f0");
-        document.documentElement.style.setProperty("--text-color", "#333");
-        document.documentElement.style.setProperty("--primary-color", "#0066cc");
-        document.documentElement.style.setProperty("--hover-color", "#ffccf2");
-        document.documentElement.style.setProperty("--footer-bg", "#004d99");
-        document.documentElement.style.setProperty("--section-bg", "white");
-        document.getElementById("theme-toggle").textContent = "Toggle Dark Mode"
-    }
-}
