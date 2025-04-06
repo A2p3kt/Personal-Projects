@@ -23,4 +23,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
         updateIcon(newTheme)
     })
+
+    // For navbar scroll effect
+    const navbar = document.getElementById("navbar");
+    // Get the initial scroll position
+    let lastScroll = window.scrollY;
+
+    //Check the scrolling activity in the window
+    window.addEventListener('scroll', () => {
+        // Get the new scroll position
+        let currentScroll = window.scrollY;
+
+        const scrollThreshold = 100;
+
+        if (Math.abs(currentScroll - lastScroll) <= scrollThreshold) {
+            return;
+        } else if (currentScroll <= 0) {
+            navbar.classList.remove('nav-hidden')
+        } else if (currentScroll > lastScroll) {
+            navbar.classList.add('nav-hidden');
+        } else {
+            navbar.classList.remove('nav-hidden');
+        }
+
+        lastScroll = currentScroll;
+    })
 })
